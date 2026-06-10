@@ -62,6 +62,6 @@ To make the models accessible, they were integrated into a responsive, user-frie
 
 ### 🛠️ Technologies Used
 - **Backend:** Python, Flask
-- **Machine Learning:** Scikit-learn, NumPy, Pandas, Imbalanced-learn (SMOTE)
+- **Machine Learning:** Scikit-learn, Pandas, Imbalanced-learn (SMOTE)
 - **NLP Library:** NLTK (Natural Language Toolkit)
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript
