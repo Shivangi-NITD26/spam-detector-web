@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Mail Detector</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS using Flask url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Floating Theme Toggle Outside the Card -->
+<button class="theme-toggle-fab" id="themeBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙</button>
+
+<div class="container">
+
+    <h2><span class="icon">🛡️</span> Spam Mail Detector</h2>
+
+    <form action="/predict" method="POST">
+
+        <div class="dropdown-container">
+            <label class="dropdown-label">Choose Algorithm:</label>
+            <select name="model_choice">
+                <option value="svm" {% if selected_model == 'svm' %}selected{% endif %}>Support Vector Machine (SVM)</option>
+                <option value="logistic" {% if selected_model == 'logistic' %}selected{% endif %}>Logistic Regression</option>
+            </select>
+        </div>
+
+        <textarea name="message" placeholder="Paste your email or text message here to analyze..." required>{% if original_text %}{{ original_text }}{% endif %}</textarea>
+
+        <div class="button-group">
+            <button type="submit" class="btn-check">Analyze Text</button>
+            <a href="/" style="width: 100%; text-decoration: none;">
+                <button type="button" class="btn-clear">Clear</button>
+            </a>
+        </div>
+    </form>
+
+    {% if prediction_text %}
+        <!-- Result Card Below Buttons -->
+        <div class="result-box {% if 'Spam' in prediction_text %} spam-alert {% else %} ham-alert {% endif %}">
+            {% if 'Spam' in prediction_text %}
+                🚨 WARNING: This is a SPAM message!
+            {% else %}
+                ✅ SAFE: This is a Normal (Ham) message.
+            {% endif %}
+            <span class="model-used-text">(Predicted using {{ model_name }})</span>
+        </div>
+    {% endif %}
+</div>
+
+<!-- Fixed Footer -->
+<footer>
+    &copy; Developed by Shivangi Patwa
+</footer>
+
+<!-- Link to external JS using Flask url_for -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
