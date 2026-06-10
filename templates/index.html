@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spam Mail Detector</title>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Link to external CSS using Flask url_for -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-<!-- Floating Theme Toggle Outside the Card -->
 <button class="theme-toggle-fab" id="themeBtn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙</button>
 
 <div class="container">
@@ -39,9 +34,8 @@
             </a>
         </div>
     </form>
-
+    
     {% if prediction_text %}
-        <!-- Result Card Below Buttons -->
         <div class="result-box {% if 'Spam' in prediction_text %} spam-alert {% else %} ham-alert {% endif %}">
             {% if 'Spam' in prediction_text %}
                 🚨 WARNING: This is a SPAM message!
@@ -53,12 +47,9 @@
     {% endif %}
 </div>
 
-<!-- Fixed Footer -->
 <footer>
     &copy; Developed by Shivangi Patwa
 </footer>
-
-<!-- Link to external JS using Flask url_for -->
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
