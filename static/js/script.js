@@ -4,16 +4,14 @@ function toggleTheme() {
 
     if (body.getAttribute('data-theme') === 'dark') {
         body.removeAttribute('data-theme');
-        btn.innerHTML = '🌙'; // Switch to moon icon
-        localStorage.setItem('theme', 'light'); // Save preference
+        btn.innerHTML = '🌙';
+        localStorage.setItem('theme', 'light');
     } else {
         body.setAttribute('data-theme', 'dark');
-        btn.innerHTML = '☀️'; // Switch to sun icon
-        localStorage.setItem('theme', 'dark'); // Save preference
+        btn.innerHTML = '☀️';
+        localStorage.setItem('theme', 'dark');
     }
 }
-
-// Check local storage on page load so the theme stays the same after hitting "Analyze Text"
 window.onload = function() {
     const savedTheme = localStorage.getItem('theme');
     const btn = document.getElementById('themeBtn');
