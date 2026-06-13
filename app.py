@@ -61,4 +61,4 @@ def predict():
                                model_name=model_name_display)  
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
