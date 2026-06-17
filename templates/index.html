@@ -20,7 +20,7 @@
         <div class="dropdown-container">
             <label class="dropdown-label">Choose Algorithm:</label>
             <select name="model_choice">
-                <option value="svm" {% if selected_model == 'svm' %}selected{% endif %}>Support Vector Machine (SVM)</option>
+                <option value="svm" {% if selected_model == 'svm' %}selected{% endif %}>Support Vector Machine</option>
                 <option value="logistic" {% if selected_model == 'logistic' %}selected{% endif %}>Logistic Regression</option>
             </select>
         </div>
@@ -40,7 +40,7 @@
             {% if 'Spam' in prediction_text %}
                 🚨 WARNING: This is a SPAM message!
             {% else %}
-                ✅ SAFE: This is a Normal (Ham) message.
+                ✅ SAFE: This is a Normal message.
             {% endif %}
             <span class="model-used-text">(Predicted using {{ model_name }})</span>
         </div>
