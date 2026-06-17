@@ -1,4 +1,4 @@
-🛡️ SMS Spam Detector (ML Model + Flask Web App)
+# 🛡️ SMS Spam Detector (ML Model + Flask Web App)
 
 A complete end-to-end machine learning project that classifies SMS/text messages as either **Spam** or **Ham (Legitimate)**.
 
