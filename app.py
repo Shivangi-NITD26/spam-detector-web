@@ -50,7 +50,7 @@ def predict():
             model_name_display = "Logistic Regression"
         else:
             prediction = svm_model.predict(vectorized_message)
-            model_name_display = "Support Vector Machine (SVM)"
+            model_name_display = "Support Vector Machine"
 
         result = "Spam" if prediction[0] == 1 else "Ham"
 
