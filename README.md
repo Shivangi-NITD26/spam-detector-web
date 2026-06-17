@@ -1,8 +1,8 @@
-# 🛡️ Spam Mail & SMS Detector (ML Model + Web App)
+🛡️ SMS Spam Detector (ML Model + Flask Web App)
 
-A complete end-to-end machine learning project that classifies SMS messages and emails as either **Spam** or **Ham** (Safe). 
+A complete end-to-end machine learning project that classifies SMS/text messages as either **Spam** or **Ham (Legitimate)**.
 
-This project includes the full model training pipeline (handling imbalanced data, text preprocessing) and a fully functional, modern web application built with Flask for users to test the models in real-time.
+This project includes the full machine learning pipeline, including text preprocessing, feature extraction, handling imbalanced data, model training, evaluation, and a fully functional Flask web application for real-time SMS spam detection.
 
 ---
 
