@@ -1,4 +1,4 @@
-# 🛡️ SMS Spam Detector (ML Model + Flask Web App)
+# SMS Spam Detector (ML Model + Flask Web App)
 
 A complete end-to-end machine learning project that classifies SMS/text messages as either **Spam** or **Ham (Legitimate)**.
 
@@ -6,7 +6,7 @@ This project includes the full machine learning pipeline, including text preproc
 
 ---
 
-## 🧠 Part 1: Machine Learning Models
+## Part 1: Machine Learning Models
 
 The core of this project relies on Natural Language Processing (NLP) and supervised machine learning algorithms to filter unwanted spam messages automatically.
 
@@ -22,7 +22,7 @@ The core of this project relies on Natural Language Processing (NLP) and supervi
 4. **Handling Imbalanced Data:** Used **SMOTE** (Synthetic Minority Over-sampling Technique) to balance the spam and ham classes in the training dataset, preventing model bias towards the majority class.
 5. **Model Building:** Trained and compared two separate classifiers (Logistic Regression and SVM).
 
-### 📊 Model Performance & Evaluation
+### Model Performance & Evaluation
 
 Both models performed exceptionally well, with **SVM** showing a slight edge in identifying spam messages (higher Precision and F1-score).
 
@@ -50,17 +50,17 @@ The trained models and the TF-IDF vectorizer were combined and serialized into a
 
 ---
 
-## 💻 Part 2: Web Application
+## Part 2: Web Application
 
 To make the models accessible, they were integrated into a responsive, user-friendly web interface.
 
-### ✨ Web App Features
+### Web App Features
 - **Algorithm Selection:** Users can dynamically switch between the **SVM** and **Logistic Regression** models using a dropdown menu to compare predictions.
 - **Real-time Processing:** Uses NLTK in the backend to clean the user's input exactly as it was done during training, before vectorizing and predicting.
 - **Modern UI/UX:** A clean, glassmorphism-inspired interface with responsive design.
 - **Dark/Light Mode:** Includes a fully functional theme toggle (saves user preference in LocalStorage).
 
-### 🛠️ Technologies Used
+### Technologies Used
 - **Backend:** Python, Flask
 - **Machine Learning:** Scikit-learn, Pandas, Imbalanced-learn (SMOTE)
 - **NLP Library:** NLTK (Natural Language Toolkit)
